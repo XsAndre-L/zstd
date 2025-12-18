@@ -1,3 +1,4 @@
+/dist
 # Object files
 *.o
 *.ko
@@ -61,3 +62,4 @@ compile_commands.json
 .clangd
 perf.data
 perf.data.old
+
