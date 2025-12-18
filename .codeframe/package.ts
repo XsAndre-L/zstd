@@ -22,15 +22,15 @@ export const build = (cwd: string = process.cwd()): BuildType => {
     type: "architectures",
     windows_x86_64: {
       configStep: `cmake -S ./build/cmake -B dist/windows/x86_64 -G Ninja \
-			-DCMAKE_TOOLCHAIN_FILE=${CMAKE_TOOLS}/windows_x86-64.cmake \
-			-DCMAKE_SYSROOT=${windows_x86_64} \
+			    -DCMAKE_TOOLCHAIN_FILE=${CMAKE_TOOLS}/windows_x86-64.cmake \
+			    -DCMAKE_SYSROOT=${windows_x86_64} \
       		-DCMAKE_BUILD_TYPE=Release \
       		-DBUILD_SHARED_LIBS=OFF \
       		-DCMAKE_C_COMPILER=${CLANG} \
       		-DCMAKE_CXX_COMPILER=${CLANGXX} \
       		-DCMAKE_C_COMPILER_TARGET=x86_64-w64-windows-gnu \
       		-DCMAKE_CXX_COMPILER_TARGET=x86_64-w64-windows-gnu \
-			-DCMAKE_INCLUDE_PATH=${windows_x86_64}/include \
+			    -DCMAKE_INCLUDE_PATH=${windows_x86_64}/include \
       		-DCMAKE_PREFIX_PATH=${CPP_OUTPUT_DIR}/zstd/windows/x86_64 \
       		-DCMAKE_INSTALL_PREFIX=${CPP_OUTPUT_DIR}/zstd/windows/x86_64
       		`,
@@ -40,7 +40,7 @@ export const build = (cwd: string = process.cwd()): BuildType => {
     windows_aarch64: {
       configStep: `cmake -S ./build/cmake -B dist/windows/aarch64 -G Ninja \
 	  		-DCMAKE_TOOLCHAIN_FILE=${CMAKE_TOOLS}/windows_aarch64.cmake \
-			-DCMAKE_SYSROOT=${windows_aarch64} \
+			  -DCMAKE_SYSROOT=${windows_aarch64} \
 		  	-DCMAKE_BUILD_TYPE=Release \
 		  	-DBUILD_SHARED_LIBS=OFF \
 		  	-DCMAKE_C_COMPILER=${CLANG} \
@@ -48,7 +48,7 @@ export const build = (cwd: string = process.cwd()): BuildType => {
 		  	-DCMAKE_RC_FLAGS=--target=aarch64-w64-mingw32 \
 		  	-DCMAKE_C_COMPILER_TARGET=aarch64-w64-windows-gnu \
 		  	-DCMAKE_CXX_COMPILER_TARGET=aarch64-w64-windows-gnu \
-			-DCMAKE_INCLUDE_PATH=${windows_aarch64}/include \
+			  -DCMAKE_INCLUDE_PATH=${windows_aarch64}/include \
 		  	-DCMAKE_PREFIX_PATH=${CPP_OUTPUT_DIR}/zstd/windows/aarch64 \
 		  	-DCMAKE_INSTALL_PREFIX=${CPP_OUTPUT_DIR}/zstd/windows/aarch64
 		  	`,
@@ -58,7 +58,7 @@ export const build = (cwd: string = process.cwd()): BuildType => {
     linux_x86_64: {
       configStep: `cmake -S ./build/cmake -B dist/linux/x86_64 -G Ninja \
 		  	-DCMAKE_TOOLCHAIN_FILE=${CMAKE_TOOLS}/linux_x86-64.cmake \
-			-DCMAKE_SYSROOT=${linux_x86_64} \
+			  -DCMAKE_SYSROOT=${linux_x86_64} \
 		  	-DCMAKE_BUILD_TYPE=Release \
 		  	-DBUILD_SHARED_LIBS=OFF \
 		  	-DCMAKE_C_COMPILER=${CLANG} \
@@ -74,7 +74,7 @@ export const build = (cwd: string = process.cwd()): BuildType => {
     linux_aarch64: {
       configStep: `cmake -S ./build/cmake -B dist/linux/aarch64 -G Ninja \
 		  	-DCMAKE_TOOLCHAIN_FILE=${CMAKE_TOOLS}/linux_aarch64.cmake \
-			-DCMAKE_SYSROOT=${linux_aarch64} \
+			  -DCMAKE_SYSROOT=${linux_aarch64} \
 		  	-DCMAKE_BUILD_TYPE=Release \
 		  	-DBUILD_SHARED_LIBS=OFF \
 		  	-DCMAKE_C_COMPILER=${CLANG} \
